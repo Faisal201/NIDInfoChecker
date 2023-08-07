@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">NID Info Checker</string>
+
+    <string-array name="location">
+        <item>নির্বাচন করা নেই</item>
+        <item>তালাইমারি</item>
+        <item>কাজলা</item>
+        <item>মতিহার</item>
+        <item>বিনোদপুর</item>
+        <item>আলুপট্টি</item>
+
+    </string-array>
+
+    <string-array name="word">
+        <item>নির্বাচন করা নেই</item>
+        <item>ওয়ার্ড ১</item>
+        <item>ওয়ার্ড ২</item>
+        <item>ওয়ার্ড ৩</item>
+        <item>ওয়ার্ড ৪</item>
+        <item>ওয়ার্ড ৫</item>
+
+    </string-array>
+
+</resources>

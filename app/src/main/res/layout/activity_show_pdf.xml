@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPdf">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/pdfTitleWithPageCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Title"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/searchInPdf2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/pdfTitleWithPageCount">
+
+            <EditText
+                android:id="@+id/searchPdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1"
+                android:autofillHints="Search word in PDF"
+                android:hint="search here"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:minHeight="48.0dip"
+                android:paddingStart="25.0dip"
+                android:paddingEnd="10.0dip"
+                android:singleLine="true"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/search_icon"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchInPdf2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/nextWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dip"
+            android:layout_marginTop="16dip"
+            android:layout_marginEnd="16dip"
+            android:layout_marginBottom="16dip"
+            android:contentDescription="search button"
+            android:text="next"
+            app:backgroundTint="@color/orange"
+            app:srcCompat="@drawable/nextbtn"
+            app:tint="@color/white"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
